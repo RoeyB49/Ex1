@@ -5,7 +5,7 @@ AR=ar
 all: mains maindloop maindrec 
 
 libclassloops.a: advancedClassificationLoop.o basicClassification.o
-	$(AR) -rcs libclassloops.a advancedClassificatioLoop.o basicClassification.o
+	$(AR) -rcs libclassloops.a advancedClassificationLoop.o basicClassification.o
 
 libclassrec.a: advancedClassificationRecursion.o basicClassification.o
 	$(AR) -rcs libclassrec.a advancedClassificationRecursion.o basicClassification.o
