@@ -73,6 +73,6 @@ printf ("%d ", i);
     
 }
 
- 
+ printf ("%c", '\n');
  
 }
