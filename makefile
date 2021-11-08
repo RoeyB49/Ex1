@@ -2,7 +2,7 @@ CC = gcc
 FLAGS = -Wall -g
 AR=ar 
 
-all: mains maindloop maindrec libclassloops.a libclassrec.a libclassrec.so libclassloops.so
+all: mains maindloop maindrec loopd recursives recursived loops
 
 loops:libclassloop.a
 
@@ -12,13 +12,13 @@ recursives:libclassrec.a
 
 recursived:libclassrec.so
 
-advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
+advancedClassificationLoop.o: advancedClassificationLoop.c 
 	$(CC) $(FLAGS) -c advancedClassificationLoop.c
 	
-basicClassification.o: basicClassification.c NumClass.h
+basicClassification.o: basicClassification.c 
 	$(CC) $(FLAGS) -c basicClassification.c
 
-advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
+advancedClassificationRecursion.o: advancedClassificationRecursion.c 
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c
 		
 libclassloops.a: advancedClassificationLoop.o basicClassification.o 
