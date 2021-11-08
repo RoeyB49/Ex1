@@ -2,7 +2,8 @@ CC = gcc
 FLAGS = -Wall -g
 AR=ar 
 
-all: mains maindloop maindrec 
+all: mains maindloop maindrec libclassloops.a libclassrec.a libclassrec.so libclassloops.so
+
 advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationLoop.c
 	
