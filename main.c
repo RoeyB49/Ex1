@@ -34,7 +34,7 @@ for (int i = p; i <= j; i++)
 if (isPalindrome (i))
 	{
 	  
-printf ("%d ", i);
+printf (" %d", i);
 	
 }
     
@@ -51,7 +51,7 @@ for (int i = p; i <= j; i++)
 if (isPrime (i))
 	{
 	  
-printf ("%d ", i);
+printf (" %d", i);
 	
 }
     
@@ -67,7 +67,7 @@ for (int i = p; i <= j; i++)
 if (isStrong (i))
 	{
 	  
-printf ("%d ", i);
+printf (" %d", i);
 	
 }
     
