@@ -15,15 +15,15 @@ libclassrec.so: advancedClassificationRecursion.o basicClassification.o
 
 libclassloops.so: advancedClassificationLoop.o basicClassification.o
 	$(CC) -shared -o libclassloops.so advancedClassificationLoop.o basicClassification.o
-
+	
+main.o: main.c NumClass.h
+	$(CC) $(FLAGS) -c main.c
+	
 mains: main.o libclassrec.a
 	$(CC) $(FLAGS) main.o libclassrec.a -lm -o mains
 	
 maindloop: main.o libclassloops.so
 	$(CC) $(FLAGS) main.o ./libclassloops.so -lm -o maindloop
-
-main.o: main.c NumClass.h
-	$(CC) $(FLAGS) -c main.c
 	
 maindrec: main.o libclassrec.so
 	$(CC) $(FLAGS) main.o ./libclassrec.so -lm -o maindrec
