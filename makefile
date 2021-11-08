@@ -21,14 +21,13 @@ mains: main.o libclassrec.a
 	
 maindloop: main.o libclassloops.so
 	$(CC) $(FLAGS) main.o ./libclassloops.so -lm -o maindloop
+
+main.o: main.c NumClass.h
+	$(CC) $(FLAGS) -c main.c
 	
 maindrec: main.o libclassrec.so
 	$(CC) $(FLAGS) main.o ./libclassrec.so -lm -o maindrec
 	
-main.o: main.c NumClass.h
-	$(CC) $(FLAGS) -c main.c
-
-
 .PHONY: clean all
 
 clean:
