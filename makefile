@@ -39,11 +39,11 @@ main.o: main.c NumClass.h
 mains: main.o libclassrec.a
 	$(CC) $(FLAGS) main.o libclassrec.a -lm -o mains
 	
-maindloop: main.o libclassloops.so
-	$(CC) $(FLAGS) main.o libclassloops.so -lm -o maindloop
+maindloop: main.o 
+	$(CC) $(FLAGS) main.o ./libclassloops.so -lm -o maindloop
 		
-maindrec: main.o libclassrec.so
-	$(CC) $(FLAGS) main.o libclassrec.so -lm -o maindrec
+maindrec: main.o 
+	$(CC) $(FLAGS) main.o ./libclassrec.so -lm -o maindrec
 	
 .PHONY: clean all
 
