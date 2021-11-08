@@ -12,13 +12,13 @@ recursives:libclassrec.a
 
 recursived:libclassrec.so
 
-advancedClassificationLoop.o: advancedClassificationLoop.c 
+advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationLoop.c
 	
-basicClassification.o: basicClassification.c 
+basicClassification.o: basicClassification.c NumClass.h
 	$(CC) $(FLAGS) -c basicClassification.c
 
-advancedClassificationRecursion.o: advancedClassificationRecursion.c 
+advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c
 		
 libclassloops.a: advancedClassificationLoop.o basicClassification.o 
